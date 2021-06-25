@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import { TextInput } from 'react-native-paper';
+import React, { useState } from "react";
+import { View, Text, StyleSheet } from "react-native";
+import { TextInput } from "react-native-paper";
 
-import { RoundedButton } from '../../components/RoundedButton';
-import { fontSizes, spacing } from '../../utils/sizes';
-import { colors } from '../../utils/colors';
+import { RoundedButton } from "../../components/RoundedButton";
+import { fontSizes, spacing } from "../../utils/sizes";
+import { colors } from "../../utils/colors";
 
 export const Zen = ({ addSubject }) => {
   const [subject, setSubject] = useState(null);
@@ -39,16 +39,16 @@ const styles = StyleSheet.create({
   innerContainer: {
     flex: 1,
     padding: spacing.md,
-    justifyContent: 'center',
+    justifyContent: "center",
   },
   title: {
     color: colors.white,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     fontSize: fontSizes.lg,
   },
   inputContainer: {
     paddingTop: spacing.md,
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
   },
 });

@@ -1,8 +1,8 @@
-import React from 'react';
-import { View, StyleSheet, FlatList, Text, SafeAreaView } from 'react-native';
+import React from "react";
+import { View, StyleSheet, FlatList, Text, SafeAreaView } from "react-native";
 
-import { fontSizes, spacing } from '../../utils/sizes';
-import { RoundedButton } from '../../components/RoundedButton';
+import { fontSizes, spacing } from "../../utils/sizes";
+import { RoundedButton } from "../../components/RoundedButton";
 
 const HistoryItem = ({ item, index }) => {
   console.log(item);
@@ -16,13 +16,13 @@ export const ZenHistory = ({ zenHistory, onClear }) => {
 
   return (
     <>
-      <SafeAreaView style={{ flex: 0.5, alignItems: 'center' }}>
+      <SafeAreaView style={{ flex: 0.5, alignItems: "center" }}>
         {!!zenHistory.length && (
           <>
             <Text style={styles.title}> Your Zen list so far: </Text>
             <FlatList
               style={{ flex: 1 }}
-              contentContainerStyle={{ flex: 1, alignItems: 'center' }}
+              contentContainerStyle={{ flex: 1, alignItems: "center" }}
               data={zenHistory}
               renderItem={HistoryItem}
             />
@@ -42,16 +42,16 @@ export const ZenHistory = ({ zenHistory, onClear }) => {
 
 const styles = StyleSheet.create({
   historyItem: (status) => ({
-    textDecorationLine: status > 1 ? 'line-through' : 'none',
+    textDecorationLine: status > 1 ? "line-through" : "none",
     fontSize: fontSizes.md,
-    color: 'white',
+    color: "white",
   }),
   title: {
-    color: 'white',
+    color: "white",
     fontSize: fontSizes.lg,
   },
   clearContainer: {
-    alignItems: 'center',
+    alignItems: "center",
     padding: spacing.md,
   },
 });
